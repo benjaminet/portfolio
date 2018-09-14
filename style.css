@@ -1,0 +1,12 @@
+h2 {
+    color:black !important;
+    text-align:center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p   {
+color:black !important;
+text-align: center;
+text-shadow: darkred;
+font-size: 30pt;
+}
+
