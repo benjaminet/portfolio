@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Luxury Living</title>
+  <head>
+
+<!-- CSS -->
+    <style>
+        body
+   {
+     margin:0px; background-color:whitesmoke; color:#2791a4; font-family:Arial, Helvetica, sans-serif;
+   }
+  
+   #main
+   {
+     width:600px; height:260px; margin-left:auto; margin-right:auto; border-radius:5px; padding-left:10px; margin-top:100px;
+     border-top:3px double #2791a4; border-bottom:3px double #2791a4; padding-top:20px;
+   }
+   #main table
+   {
+     font-family: Arial, Helvetica, sans-serif, cursive;
+   } 
+  /* css code for textbox */
+  #main .tb
+  {
+    height:28px; width:310px; border:1px solid #2791a4; color:#2791a4; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;
+  }
+
+   /* css code for button*/
+   #main .btnForgot
+   {
+    width:150px; height:32px; outline:none;  font-weight:bold; border:0px solid #2791a4; text-shadow: 0px 0.5px 0.5px #fff;	
+    border-radius: 2px; font-weight: 600; color: #2791a4; letter-spacing: 1px; font-size:14px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+   }
+   #main .btnLogin
+   {
+    width:80px; height:32px; outline:none;  font-weight:bold; border:0px solid #27a465; text-shadow: 0px 0.5px 0.5px #fff;	
+    border-radius: 2px; font-weight: 600; color:#2791a4; letter-spacing: 1px; font-size:14px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+   }
+
+   #main .btnRegister
+   {
+    width:80px; height:32px; outline:none;  font-weight:bold; border:0px solid #27a465; text-shadow: 0px 0.5px 0.5px #fff;	
+    border-radius: 2px; font-weight: 600; color:#2791a4; letter-spacing: 1px; font-size:14px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+   }
+
+  
+   #main .btn:hover
+   {
+    background-color:#27a465; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+   }
+        </style>
+   
+    </head> 
+  </head>
+
+	<body background="http://oi63.tinypic.com/2cqek2s.jpg">
+    
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2>Welcome to Luxury Living</h2>
+	</div>
+	<!-- Login box -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td>Enter email</td>
+	<td><input type="text" placeholder="Enter your email here" id="email" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter password</td> 
+	<td><input type="password" placeholder="Enter your password here" id="pwd1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="submit" value="Forgot password" class="btnForgot" onClick="forgotPassword()" />
+    <input type="submit" value="Login" class="btnLogin" onClick="login()" />
+    <input type="submit" value="Register" class="btnRegister" onClick="register()" /></td>
+	</tr>
+	</table>
+	</div>
+  	 <!-- login box div ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+
+	<!-- JavaScript-->
+		<script >
+	// https://www.formget.com/javascript-login-form/ LINK FOR LOGIN ATTEMPS
+    // https://stackoverflow.com/questions/6262524/creating-a-login-in-javascript-array-comparison LINK FOR USERNAMES AND PASSWORDS TO USE
+
+
+    function forgotPassword()
+        {
+            window.location = "newPassword.html";               //window.location: new location for the window. Redirected to "newPassword.html" which is another interface
+        }
+
+    function register() 
+        {
+            window.location = "register.html";
+        }
+
+
+    function login()                                    //function for the login 
+{
+    var uname = document.getElementById("email").value;         //referring to and getting the element with the id="email". "value" is getting the value of a text field (string).
+    var pwd = document.getElementById("pwd1").value;            //referring to and getting the element with the id="pwd1".  "value" is getting the value of a text field (string).
+    
+    if(uname =='')
+    {
+        alert("Please enter your email.");
+    }
+    else if(pwd=='')
+    {
+        alert("Please enter the password.");
+    }
+    else if((uname == "2cool4school@gmail.com" && pwd == "passWord123") || (uname == "myemail@cbs.dk" && pwd == "iLoveTRAVEL0"))                    
+    {
+        alert("Successfull login");
+        window.location = "mainPage.html";
+    }
+    else ((uname != "2cool4school@gmail.com" && pwd != "passWord123") || (uname != "myemail@cbs.dk" && pwd != "iLoveTRAVEL0"))
+    {
+        alert("Your email or password is incorrect. Please try again.");
+    }
+    
+
+        }
+		
+        </script>
+        <!-- End of JavaScript -->
+  </body>
+  </html>
